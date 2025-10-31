@@ -1,4 +1,3 @@
-// Simple front-end reservation logic (no real payment)
 (() => {
   const MAX_CAPACITY = 70;
   let remaining = MAX_CAPACITY;

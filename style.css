@@ -44,6 +44,10 @@ body{
   top: 0;
   z-index: 100;
   padding: 1px 0; 
+  font-family: 'GreekFreak', serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
 .topbar .container {
@@ -241,6 +245,16 @@ body{
 
 .half.right h3 {
   font-size: 1.8rem;
+}
+
+.right.half img.ng {
+  display: block;
+  width: 100%;
+  max-width: 450px;  
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .schedule{
