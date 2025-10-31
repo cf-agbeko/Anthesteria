@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy Tickets — Anthesteria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tickets.css" />
+  <link rel="icon" type="image/png" href="img/greekimg.png">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-text">Anthesteria</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="tickets-hero">
+    <div class="container grid">
+      <section class="intro">
+        <h1>Reserve Your Spot Now</h1>
+        <p>Book your place for our one-day Greek festival at Naiposha Gardens. Fill in a few details and we’ll confirm your reservation.</p>
+        <ul class="greek-list">
+          <li>70 seats, intimate & personal</li>
+          <li>Food & wine pairing included options</li>
+          <li>18 Oct 2025 | 11:00–18:00</li>
+        </ul>
+      </section>
+
+      <section class="form-wrap">
+        <ol class="stepper" aria-label="Checkout steps">
+          <li class="active" data-step="1"><span>1</span><small>Contact</small></li>
+          <li data-step="2"><span>2</span><small>Tickets</small></li>
+          <li data-step="3"><span>3</span><small>Extras</small></li>
+          <li data-step="4"><span>4</span><small>Review</small></li>
+        </ol>
+
+        <form id="ticketsForm" novalidate>
+          <fieldset class="step current" data-step="1">
+            <legend>Contact details</legend>
+            <div class="field">
+              <label for="name">Full name*</label>
+              <input id="name" name="name" type="text" required placeholder="e.g., My Name">
+              <small class="error" data-for="name"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email*</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com">
+              <small class="error" data-for="email"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="+254 7xx xxx xxx">
+            </div>
+            <div class="actions">
+              <button type="button" class="btn primary next">Next</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="step" data-step="2">
+            <legend>Tickets</legend>
+            <div class="field two">
+              <div>
+                <label for="qty">Quantity*</label>
+                <select id="qty" name="qty" required>
+                  <option value="1" selected>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+              <div>
+                <label for="tier">Ticket type*</label>
+                <select id="tier" name="tier" required>
+                  <option value="standard" selected>Standard</option>
+                  <option value="with-pairing">With Food & Wine Pairing</option>
+                  <option value="student">Student</option>
+                </select>
+              </div>
+            </div>
+            <div class="muted tiny">Capacity remaining shown on the next step.</div>
+            <div class="actions">
+              <button type="button" class="btn ghost prev">Back</button>
+              <button type="button" class="btn primary next">Next</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="step" data-step="3">
+            <legend>Extras</legend>
+            <div class="field">
+              <label for="notes">Notes (dietary / accessibility)</label>
+              <input id="notes" name="notes" type="text" placeholder="Let us know how we can help">
+            </div>
+            <div class="field">
+              <label>Workshops (optional)</label>
+              <div class="checks">
+                <label><input type="checkbox" name="workshops" value="flowers"> Flower arranging</label>
+                <label><input type="checkbox" name="workshops" value="pottery"> Pottery wheel</label>
+              </div>
+            </div>
+            <div class="actions">
+              <button type="button" class="btn ghost prev">Back</button>
+              <button type="button" class="btn primary next">Next</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="step" data-step="4">
+            <legend>Review & confirm</legend>
+            <div id="review" class="review"></div>
+            <div class="actions">
+              <button type="button" class="btn ghost prev">Back</button>
+              <button type="submit" class="btn primary">Confirm reservation</button>
+            </div>
+            <p class="tiny muted">You’ll see the confirmation on this page.</p>
+          </fieldset>
+        </form>
+
+        <div id="result" class="result" hidden aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 Anthesteria Festival</p>
+      <p class="tiny">This page does not process payments. For official tickets, please contact the organizers.</p>
+    </div>
+  </footer>
+
+  <script src="tickets.js"></script>
+</body>
+</html>

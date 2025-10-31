@@ -1,0 +1,387 @@
+:root{
+  --sky: #87ceea;          
+  --sky-600:#3ea3ee;
+  --wine:#38000d;          
+  --wine-700:#5c0d1c;
+  --white:#ffffff;
+  --ink:#0e1320;
+  --slate:#6b7280;
+  --bg:#f7fbff;
+  --ring: rgba(62,163,238,.35);
+  --radius:18px;
+}
+
+@font-face {
+  font-family: 'GreekFreak';
+  src: url('../fonts/Greek-Freak.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  box-sizing:border-box
+}
+
+html,body{
+  margin:0;
+  padding:0
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+.container{ 
+  width:min(1100px, 92%); 
+  margin-inline:auto; 
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1px 0; 
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand{ 
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+}
+
+.brand-text{ 
+  font-family: 'GreekFreak', serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.nav a{
+  color:var(--wine); 
+  text-decoration:none; 
+  margin-left:18px; 
+  font-weight:600;
+}
+
+.nav a:hover{ 
+  color:var(--wine); 
+}
+
+.hero{
+  background:
+    url("img/bg.jpg");
+  background-size: cover;
+  padding:260px 0 240px;
+  margin-top: -50px;
+}
+
+.hero-inner{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.hero-copy {
+  width: 1000px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  padding: 40px 50px;
+}
+
+.hero-copy .subtitle { 
+  color: var(--wine); 
+  text-shadow: none; 
+}
+
+.hero-copy h1{
+  font-family: 'GreekFreak', serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  margin:6px 0 8px; line-height:1.15;
+  font-size: 5rem;
+}
+
+.subtitle{ 
+  font-size: 1.1rem;
+  color: var(--wine);
+  font-weight: 600;
+  margin-bottom: 24px; 
+}
+
+.cta-row{ 
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn{
+  display:inline-block; 
+  padding:12px 18px; 
+  border-radius:12px;
+  text-decoration:none; 
+  font-weight:700; 
+  border:1.5px solid transparent;
+  transition:.2s transform ease, .3s background ease;
+  will-change:transform;
+}
+
+.btn:hover{ 
+  transform:translateY(-1px); 
+}
+
+.btn:active{ 
+  transform:translateY(0); 
+}
+
+.btn.primary{ 
+  background:var(--wine); 
+  color:var(--white); 
+}
+
+.btn.primary:hover{ 
+  background:var(--wine-700); 
+}
+
+.btn.secondary{ 
+  background:var(--wine); 
+  color:#e0e3e5; 
+}
+
+.btn.ghost{ 
+  background:transparent; 
+  border-color:var(--wine);
+  color:var(--wine); 
+}
+
+.btn.ghost:hover{ 
+  background:rgba(122,16,37,.06); 
+}
+
+.hero-card{
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 16px;
+  padding: 18px 20px;
+  color: var(--ink);
+}
+
+.card-head{ 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+}
+
+.card-head h3{ 
+  font-family:Cinzel, serif; 
+  margin:8px 0; 
+}
+
+.hero-list{ 
+  margin:10px 0 0 18px; 
+}
+
+.section{ 
+  padding:56px 0; 
+}
+
+.section.soft{ 
+  background:#fff; 
+}
+
+.split{ 
+  display:grid; 
+  gap:28px; 
+  grid-template-columns:1.1fr .9fr; 
+  align-items:start; 
+}
+
+.split-line{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 48px;               
+  position: relative;
+  padding: 40px 0;         
+}
+
+.split-line::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1.5px;
+  background: rgba(122,16,37,0.18); 
+  transform: translateX(-50%);
+}
+
+.half{
+  flex: 1 1 0;
+  padding: 0 16px;         
+}
+
+.left.half, .right.half{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.half.right h3 {
+  font-size: 1.8rem;
+}
+
+.schedule{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.schedule li{ 
+  padding: 8px 0; 
+}
+
+.schedule span{
+  display: inline-block;
+  width: 72px;
+  color: var(--wine);
+  font-weight: 700;
+}
+
+@media (max-width: 900px){
+  .split-line{
+    flex-direction: column;
+    gap: 28px;
+  }
+  .split-line::before{ display: none; }
+  .half{ padding: 0; }
+}
+
+.greek-section {
+  background: var(--sand);  
+  color: #111;
+}
+
+.greek-section-alt {
+  background: var(--white);   
+  color: #111;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 800px){ 
+  .form-row{ grid-template-columns:1fr; } 
+}
+
+.field{ 
+  display:flex; 
+  flex-direction:column; 
+  gap:8px; 
+}
+
+label{ 
+  font-weight:700;
+}
+
+input, select{
+  padding:12px 12px; 
+  border-radius:10px; 
+  border:1.5px solid rgba(0,0,0,.12); 
+  background:#fff;
+  outline:none; 
+  transition:.2s border ease, .2s box-shadow ease;
+}
+
+input:focus, select:focus{
+  border-color:var(--sky-600);
+  box-shadow:0 0 0 6px var(--ring);
+}
+
+.error{ 
+  color:var(--wine); 
+  min-height:1em; 
+}
+
+.result{
+  margin-top:16px; 
+  padding:14px; 
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(62,163,238,.12), rgba(62,163,238,.08));
+  border:1px solid rgba(62,163,238,.25);
+}
+
+.bullets{ 
+  margin:0; 
+  padding-left:18px; 
+}
+
+.panel{
+  background:#fff; 
+  border:1px 
+  solid rgba(0,0,0,.06);
+  border-radius:var(--radius); 
+  padding:18px; 
+  box-shadow:0 10px 26px rgba(0,0,0,.06);
+}
+
+.schedule{ 
+  margin:0; 
+  padding-left:18px; 
+}
+
+.schedule li{ 
+  padding:6px 0; 
+}
+
+.schedule span{
+  display:inline-block; 
+  width:64px; 
+  font-weight:700; 
+  color:var(--wine);
+}
+
+.map-section{ 
+  padding-top:38px; 
+}
+
+.map-wrap{ 
+  margin-top:8px; 
+  width:100%; 
+  height:340px; 
+  border-top:2px solid var(--wine); 
+  border-bottom:2px solid var(--wine); 
+}
+
+.map-wrap iframe{ 
+  width:100%; 
+  height:100%; 
+  border:0; 
+}
+
+.footer{ 
+  background: var(--wine); 
+  color:#cdd5e1;
+  text-align: center;
+  font-family: 'GreekFreak', serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.footer-inner{ 
+  padding: 1px 0; 
+  text-align:center; 
+}
+
+.tiny{ font-size:12px; }
