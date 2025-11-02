@@ -158,6 +158,103 @@ body{
   font-weight:700; 
 }
 
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .intro h1 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .greek-list {
+    text-align: left;
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  .form-wrap {
+    width: 100%;
+    padding: 18px;
+  }
+}
+
+/* Small phones: reduce font size and spacing */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .tickets-hero {
+    padding: 40px 0 80px;
+  }
+
+  .stepper {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .stepper li span {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  fieldset legend {
+    font-size: 1.2rem;
+  }
+
+  .field.two {
+    grid-template-columns: 1fr;
+  }
+
+  input, select {
+    font-size: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .greek-list li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small screens: keep form usable */
+@media (max-width: 400px) {
+  .tickets-hero {
+    padding: 24px 0 60px;
+  }
+
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-wrap {
+    padding: 14px;
+  }
+}
+
 fieldset{ 
   border:0; 
   padding:0; 

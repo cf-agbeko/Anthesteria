@@ -80,6 +80,31 @@ body{
   color:var(--wine); 
 }
 
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav a {
+    margin: 0 8px;
+    font-size: 0.95rem;
+  }
+
+  .topbar .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .brand-text {
+    font-size: 1.8rem;
+  }
+}
+
 .hero{
   background:
     url("img/bg.jpg");
@@ -115,6 +140,32 @@ body{
   font-weight: normal;
   margin:6px 0 8px; line-height:1.15;
   font-size: 5rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 140px 0 120px;
+    background-position: center;
+  }
+
+  .hero-copy {
+    width: 90%;
+    padding: 28px 20px;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.6rem;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .subtitle{ 
@@ -274,13 +325,23 @@ body{
   font-weight: 700;
 }
 
-@media (max-width: 900px){
-  .split-line{
+@media (max-width: 900px) {
+  .split-line {
     flex-direction: column;
     gap: 28px;
+    padding: 40px 20px;
   }
-  .split-line::before{ display: none; }
-  .half{ padding: 0; }
+
+  .split-line::before { display: none; }
+
+  .half {
+    padding: 0;
+  }
+
+  .right.half img.ng {
+    max-width: 100%;
+    margin: 10px 0;
+  }
 }
 
 .greek-section {
@@ -383,6 +444,13 @@ input:focus, select:focus{
   border:0; 
 }
 
+@media (max-width: 700px) {
+  .map-wrap {
+    height: 250px;
+  }
+}
+
+
 .footer{ 
   background: var(--wine); 
   color:#cdd5e1;
@@ -399,3 +467,14 @@ input:focus, select:focus{
 }
 
 .tiny{ font-size:12px; }
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  .footer-inner p {
+    margin: 4px 0;
+  }
+}
