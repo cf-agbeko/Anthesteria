@@ -73,6 +73,10 @@ body{
   text-decoration:none; 
   margin-left:18px; 
   font-weight:600; 
+  font-family: 'GreekFreak', serif;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 .nav a:hover{ 
@@ -99,9 +103,11 @@ body{
 }
 
 .intro h1{ 
-  font-family:Cinzel,serif; 
+  font-family: 'GreekFreak', serif;
   font-size: clamp(28px, 4vw, 48px); 
   margin:6px 0 8px; 
+  font-size: 4rem;
+  letter-spacing: 1px;
 }
 
 .greek-list{ 
@@ -185,7 +191,6 @@ body{
   }
 }
 
-/* Small phones: reduce font size and spacing */
 @media (max-width: 600px) {
   body {
     font-size: 0.95rem;
@@ -240,7 +245,6 @@ body{
   }
 }
 
-/* Very small screens: keep form usable */
 @media (max-width: 400px) {
   .tickets-hero {
     padding: 24px 0 60px;
